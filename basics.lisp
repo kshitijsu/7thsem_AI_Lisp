@@ -1,17 +1,14 @@
 ;gnu clisp 2.49
 
-
-(write-line "Add two numbers, inhabit evaluation ")
-(write (+ 2 5))
-
-(write-line " ")
-
-(write-line "Add two numbers, evaluate expression ")
-(write '(+ 2 5))
-
+;Basic outputs
+(write-line "Add two numbers, inhabit evaluation ");
+;Expression evaluation
+(write (+ 2 5));
+(write-line " ");
+(write-line "Add two numbers, evaluate expression ");
+(write '(+ 2 5));
 
 ;Evaluting the expression: (60 * 9 / 5 + 32)
-
 ;Multiplication first
 (write (+(/ (* 60 9) 5)32))
 ; Output -> 140
@@ -20,6 +17,7 @@
 (write (+(* 60 (/ 9 5))32))
 ; Output -> 140
 
+;Setting up variables and their types
 (setq x 10)
 (print x)
 ;10
@@ -51,3 +49,12 @@
 ;"Kshitij"
 (print (type-of x))
 ;(SIMPLE-BASE-STRING 7)
+
+;Evaluting Variables
+(setq x 62)
+(setq y 10)
+(print (+ x y))             ;72 
+(print (- x y))             ;52
+(print (* x y))             ;620
+(print (/ x y))             ;31/5
+(print (mod x y))           ;2
