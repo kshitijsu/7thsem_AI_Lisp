@@ -19,6 +19,11 @@
 (setq x 10)
 (print x)                       ;10
 (print (type-of x))             ;(INTEGER 0 281474976710655) 
+
+(setq y -10)
+(print y)                       ;-10
+(print (type-of y))             ;(INTEGER -281474976710656 (0)) 
+
 (setq x 34.257)
 (print x)                       ;34.257
 (print (type-of x))             ;SINGLE-FLOAT 
@@ -46,3 +51,11 @@
 (print (* x y))                 ;620
 (print (/ x y))                 ;31/5
 (print (mod x y))               ;2
+
+;Format Specifiers
+(setq x 10)                     ;x=10;
+(format t "~% ~D" x)            ;10
+
+(setq y(read))                  ;y=200 (from STDIN)
+(format t "~% ~D" y)            ;200
+
