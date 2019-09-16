@@ -1,0 +1,21 @@
+male(hari).
+female(lina).
+parent(pradeep,charles).
+parent(lina,charles).
+parent(charles,hari).
+parent(charles,wasim).
+parent(bhavesh,duke).
+parent(ram,charles).
+parent(ram,bhavesh).
+grandmother(GM,C):-
+    mother(GM, P),
+    parent(P,C).
+mother(M,C):-
+    female(M),
+    parent(M,C).
+uncle(B,C):-
+    brothers(B,P),
+    parent(P,C).
+brothers(B1,B2):-
+    parent(P,B1),
+    parent(P,B2).
